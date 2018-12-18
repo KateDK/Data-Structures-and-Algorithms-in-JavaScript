@@ -10,7 +10,10 @@ function createPriorityQueue() {
         : lowPriorityQueue.enqueue(item);
     },
     dequeue() {
-      queue.pop();
+      if (!highPriorityQueue.isEmpty()) {
+        return highPriorityQueue.dequeue();
+      }
+      return lowPriorityQueue.dequeue();
     },
     peek() {
       return queue[queue.length - 1];
