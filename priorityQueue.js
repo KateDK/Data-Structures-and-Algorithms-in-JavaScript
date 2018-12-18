@@ -4,8 +4,12 @@ function createPriorityQueue() {
   const lowPriorityQueue = createQueue();
   const highPriorityQueue = createQueue();
   return {
-    enqueue(item) {
-      queue.unshift(item);
+    enqueue(item, isHighPriority = false) {
+      if (isHighPriority) {
+        highPriorityQueue.enqueue(item);
+      } else {
+        lowPriorityQueue.enqueue(item);
+      }
     },
     dequeue() {
       queue.pop();
