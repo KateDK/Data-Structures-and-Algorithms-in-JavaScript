@@ -12,7 +12,16 @@ function createQueue() {
       queue.pop();
     },
     //peek
+    peek() {
+      return queue[queue.length - 1];
+    },
     //length
+    /*get length(){
+      return queue.length;
+    }*/
+    length() {
+      return queue.length;
+    },
     //isEmpty
   };
 }
