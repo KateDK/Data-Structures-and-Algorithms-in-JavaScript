@@ -1,4 +1,4 @@
-const { createQueue } = require('./index');
+const createQueue = require('./index');
 
 function createPriorityQueue() {
   const lowPriorityQueue = createQueue();
@@ -29,3 +29,7 @@ function createPriorityQueue() {
     },
   };
 }
+
+const q = createPriorityQueue();
+
+console.log(q.isEmpty());
