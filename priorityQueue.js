@@ -16,13 +16,16 @@ function createPriorityQueue() {
       return lowPriorityQueue.dequeue();
     },
     peek() {
-      return queue[queue.length - 1];
+      if (!highPriorityQueue.isEmpty()) {
+        return highPriorityQueue.peek();
+      }
+      return lowPriorityQueue.peek();
     },
     length() {
-      return queue.length;
+      return highPriorityQueue.length + lowPriorityQueue.length;
     },
     isEmpty() {
-      return !queue.length;
+      return highPriorityQueue.isEmpty() && lowPriorityQueue.isEmpty();
     },
   };
 }
