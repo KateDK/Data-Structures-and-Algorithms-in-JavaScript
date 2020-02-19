@@ -32,3 +32,16 @@ console.log(same([1, 2, 3], [4, 1, 9])); //true
 console.log(same([2, 1, 3], [4, 1, 9])); //true
 console.log(same([1, 2, 3], [1, 9])); //false
 console.log(same([1, 2, 1], [4, 4, 1])); //false
+
+
+/*
+Givent two strings, write a function to determine if the second string is an anagram of the first string. An anagram is a word, phrase or name formed by rearranginf rhe letters of another, such as cinema, formed from iceman.
+*/
+
+console.log(isAnagram('','')); //true
+console.log(isAnagram('aaz','zza')); //false
+console.log(isAnagram('anagram','nagaram')); //true
+console.log(isAnagram('rat','car')); //false
+console.log(isAnagram('awesome','awesom')); //false
+console.log(isAnagram('qwerty','qewwrt')); //true
+console.log(isAnagram('texttwisttime','timetwisttext')); //true
