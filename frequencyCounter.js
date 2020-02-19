@@ -8,20 +8,13 @@ function same(arr1, arr2) {
     const obj2={};
     for(let i = 0; i < arr1.length; i++){
       const squared = arr1[i]*arr1[i];
-      if(obj1[squared]){
-        obj1[squared]++;
-      }else{
-        obj1[squared] = 1;
-      }
+      obj1[squared] ? obj1[squared]++ : obj1[squared] = 1;
+
 
     }
     for(let i = 0; i < arr2.length; i++){
       const compareTo = arr2[i];
-      if(obj2[compareTo]){
-        obj2[compareTo]++;
-      }else{
-        obj2[compareTo] = 1;
-      }
+      obj2[compareTo] ? obj2[compareTo]++ :obj2[compareTo] = 1;
     }
     const compare = Object.keys(obj1);
     for(let i = 0; i < compare.length; i++){
