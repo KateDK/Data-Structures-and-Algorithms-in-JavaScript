@@ -5,17 +5,19 @@ Return an array that includes both values that sum to zero or undefined if a pai
 */
 
 function sumZero(arr){
-  let first = 0;
-  let last = arr.length-1 ;
-  while(last > first){
-    if(arr[first] + arr[last] === 0){
-      return [arr[first],arr[last]];
+  let firstIndex = 0;
+  let lastIndex = arr.length-1 ;
+  while(lastIndex > firstIndex){
+    const first = arr[firstIndex];
+    const last = arr[lastIndex];
+    if(first + last === 0){
+      return [first,last];
     }
-    if(arr[first] + arr[last] > 0){
-      last--;
+    if(first + last > 0){
+      lastIndex--;
     }
-    if(arr[first] + arr[last] < 0){
-      first++;
+    if(first + last < 0){
+      firstIndex++;
     }
   }
   return undefined;
