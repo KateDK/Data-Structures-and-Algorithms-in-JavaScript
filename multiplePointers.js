@@ -36,14 +36,31 @@ console.log(sumZero([]));//undefined
   There can be negative numbers in the array, but it will always be sorted.
  */
 
+// const countUniqueValues = (arr) => {
+//   const map = {};
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     const current = arr[i];
+//     if (!map[current]) {
+//       map[current] = true;
+//       count++;
+//     }
+//   }
+//   return count;
+// };
+
 const countUniqueValues = (arr) => {
-  const map = {};
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    const current = arr[i];
-    if (!map[current]) {
-      map[current] = true;
+  if(!arr.length) return 0;
+  let first = 0;
+  let second = first+1;
+  let count = 1;
+  while(second < arr.length){
+    if(arr[first] === arr[second]){
+      second++;
+    }else{
       count++;
+      first = second;
+      second++;
     }
   }
   return count;
