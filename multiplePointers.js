@@ -29,3 +29,9 @@ console.log(sumZero([-2,-1,0,0,3,4]));//[0,0];
 console.log(sumZero([-2,0,1,3]));//undefined
 console.log(sumZero([1,2,3]));//undefined
 console.log(sumZero([]));//undefined
+
+
+/**
+  implement a function called countUniqueValues, which takes a sorted array and counts the unique values in the array.
+  There can be negative numbers in the array, but it will always be sorted.
+ */
