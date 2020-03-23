@@ -49,18 +49,30 @@ console.log(sumZero([]));//undefined
 //   return count;
 // };
 
+// const countUniqueValues = (arr) => {
+//   if(!arr.length) return 0;
+//   let first = 0;
+//   let second = first+1;
+//   let count = 1;
+//   while(second < arr.length){
+//     if(arr[first] === arr[second]){
+//       second++;
+//     }else{
+//       count++;
+//       first = second;
+//       second++;
+//     }
+//   }
+//   return count;
+// };
+
 const countUniqueValues = (arr) => {
-  if(!arr.length) return 0;
-  let first = 0;
-  let second = first+1;
-  let count = 1;
-  while(second < arr.length){
-    if(arr[first] === arr[second]){
-      second++;
-    }else{
+  let count = arr.length > 1 ? 1 : 0;
+  for (let i = 1; i < arr.length; i++) {
+    const prev = arr[i - 1];
+    const current = arr[i];
+    if (current !== prev) {
       count++;
-      first = second;
-      second++;
     }
   }
   return count;
