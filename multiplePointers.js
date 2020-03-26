@@ -50,7 +50,7 @@ console.log(sumZero([]));//undefined
 // };
 
 // const countUniqueValues = (arr) => {
-//   if(!arr.length) return 0;
+//   if(arr.length === 0) return 0;
 //   let first = 0;
 //   let second = first+1;
 //   let count = 1;
