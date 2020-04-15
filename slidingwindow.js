@@ -4,10 +4,9 @@
  */
 
 const maxSubarraySum = (arr, n)=>{
-  if(arr.length === 0){
+  if(n > arr.length){
     return null;
   }
-  n = n<= arr.length ? n : arr.length;
   let max = 0;
   for(let i = 0; i < arr.length; i++){
     let tempMax = 0;
