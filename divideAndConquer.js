@@ -11,16 +11,14 @@ while(start < end){
   if(arr[mid]>val){
     end=mid;
   }
-  if(arr[mid]<val){
+  else if(arr[mid]<val){
     start = mid+1;
   }
-  if(arr[mid]=== val){
-    if(arr[mid-1]===val){
+  else if(arr[mid-1]===val){
       end = mid;
     }else{
       return mid;
     }
-  }
 }
 return -1;
 };
