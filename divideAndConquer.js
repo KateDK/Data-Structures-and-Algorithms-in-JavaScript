@@ -4,27 +4,25 @@
  */
 
 const search = (arr, val) => {
-  let index = Math.floor(arr.length / 2);
-  let visited = {};
-  while (index >= 0 && index < arr.length) {
-    const current = arr[index];
-
-    if (visited[index]) {
-      return -1;
-    } else {
-      visited[index] = true;
-
-      if (current === val) {
-        return index;
-      }
-      if (current > val) {
-        index--;
-      } else {
-        index++;
-      }
+let start = 0;
+let end = arr.length;
+while(start < end){
+  let mid = Math.floor((end-start)/2)+start;
+  if(arr[mid]>val){
+    end=mid;
+  }
+  if(arr[mid]<val){
+    start = mid+1;
+  }
+  if(arr[mid]=== val){
+    if(arr[mid-1]===val){
+      end = mid;
+    }else{
+      return mid;
     }
   }
-  return -1;
+}
+return -1;
 };
 
 console.log(search([1,2,3,4,5,6],4));//3
