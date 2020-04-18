@@ -33,7 +33,8 @@ console.log(search([1,3,5,6,8,9],7));//-1
 console.log(search([1, 3, 5, 6, 8, 9], 7));//-1
 console.log(search([1,2,3,4,5,6,6],6));//5
 console.log(search([1,1,2,3,4,5,6,6],1));//0
-
+console.log(search([0,1,1,2,2,2,2,2,2,2,2,2,2,3,70,80],2));//3
+console.log(search([0,1,1,2,2,2,2,2,2,2,2,2,2,3,70,80],3));//13
 
 
 
