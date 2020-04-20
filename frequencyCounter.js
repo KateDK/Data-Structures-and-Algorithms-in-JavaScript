@@ -70,6 +70,7 @@ console.log(isAnagram('texttwisttime','timetwisttext')); //true
 
 /**
  Write a function called sameFrequency that takes two positive integers. find if the two numbers have the same frequency of digits.
+ Time complexity should be O(n);
  */
 
 const sameFrequency = (n1,n2)=>{
