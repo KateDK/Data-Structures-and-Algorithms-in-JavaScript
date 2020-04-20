@@ -90,7 +90,20 @@ const countUniqueValues = (arr) => {
  */
 
  let avaregePair = (arr, ave)=>{
+let start = 0;
+let end = arr.length-1;
 
+while(start < end){
+  let current = (arr[start]+arr[end])/2;
+  if(current > ave){
+    end--;
+  }else if (current < ave){
+    start++;
+  }else{
+    return true;
+  }
+}
+return false;
  };
 
 
