@@ -117,7 +117,6 @@ console.log(sameFrequency(3589577,5879385));//false
 
  function areThereDuplicates(){
   let args = [...arguments];
-  if(args.length){
     const map = {};
     for(let i = 0; i < args.length; i++){
       let current = args[i];
@@ -127,7 +126,6 @@ console.log(sameFrequency(3589577,5879385));//false
         map[current] = 1;
       }
     }
-  }
 return false;
 };
 
