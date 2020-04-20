@@ -82,3 +82,12 @@ const countUniqueValues = (arr) => {
  console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13])); //7
  console.log(countUniqueValues([])); //0
  console.log(countUniqueValues([-2,-1,-1,0,1])); //4
+ /**
+  Implement a function called areThereDuplicates that takes a variable number of arguments and checks if there are any duplicates among them.
+
+  time should be O(n) OR O(n log n);
+  space should be O(n) OR O(1);
+  */
+
+
+const areThereDuplicates = ()=>{};
