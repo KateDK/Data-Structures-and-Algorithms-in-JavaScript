@@ -83,4 +83,18 @@ const countUniqueValues = (arr) => {
  console.log(countUniqueValues([])); //0
  console.log(countUniqueValues([-2,-1,-1,0,1])); //4
 
+/**
+ Write a function called avaregePair that takes a sorted array and a target average. return true if there is a pair of values in the array where the average of the pair equals the target average. there may be more than one pair.
 
+ Time complexity shoule be O(n)
+ */
+
+ let avaregePair = (arr, ave)=>{
+
+ };
+
+
+ console.log(avaregePair([1,2,3],2.5));//true
+ console.log(avaregePair([1,2,2,5,6,7,10,12,19],18));//true
+ console.log(avaregePair([-1,0,3,4,5,6],4.1));//false
+ console.log(avaregePair([],4));//false
