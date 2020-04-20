@@ -105,3 +105,32 @@ console.log(sameFrequency(34,14));//false
 console.log(sameFrequency(3589578,5879385));//true
 console.log(sameFrequency(22,222));//false
 console.log(sameFrequency(3589577,5879385));//false
+
+
+ /**
+  Implement a function called areThereDuplicates that takes a variable number of arguments and checks if there are any duplicates among them.
+
+  time should be O(n) OR O(n log n);
+  space should be O(n) OR O(1);
+  */
+
+
+ function areThereDuplicates(){
+  let args = [...arguments];
+  if(args.length){
+    const map = {};
+    for(let i = 0; i < args.length; i++){
+      let current = args[i];
+      if(map[current]){
+        return true;
+      }else{
+        map[current] = 1;
+      }
+    }
+  }
+return false;
+};
+
+console.log(areThereDuplicates(1,2,3));//false
+console.log(areThereDuplicates(1,2,2));//true
+console.log(areThereDuplicates("a", "b", "c", "a"));//true
