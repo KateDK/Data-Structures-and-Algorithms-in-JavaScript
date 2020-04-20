@@ -74,7 +74,37 @@ console.log(isAnagram('texttwisttime','timetwisttext')); //true
  */
 
 const sameFrequency = (n1,n2)=>{
+n1=n1.toString();
+n2=n2.toString();
+const map = {};
+  if(n1.length === n2.length){
 
+    for(let i = 0; i < n1.length; i++){
+      let current = n1[i];
+      if(map[current]){
+        map[current]++;
+      }else{
+        map[current]= 1;
+      }
+    }
+    for(let i = 0; i < n2.length; i++){
+      let current = n2[i];
+      if(!map[current]|| map[current < 0]){
+        return false;
+      }else{
+        map[current]--;
+      }
+    }
+
+    let mapVals = Object.values(map);
+    for(let i = mapVals.length-1; i >= 0; i--){
+      if(mapVals[i] === 0){
+        mapVals.pop();
+      }
+    }
+    return !(mapVals.length > 0);
+  }
+  return false;
 };
 
 console.log(sameFrequency(182,281));//true
