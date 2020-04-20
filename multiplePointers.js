@@ -90,7 +90,21 @@ const countUniqueValues = (arr) => {
   */
 
 
-const areThereDuplicates = ()=>{};
+ function areThereDuplicates(){
+  let args = [...arguments];
+  if(args.length){
+    const map = {};
+    for(let i = 0; i < args.length; i++){
+      let current = args[i];
+      if(map[current]){
+        return true;
+      }else{
+        map[current] = 1;
+      }
+    }
+  }
+return false;
+};
 
 console.log(areThereDuplicates(1,2,3));//false
 console.log(areThereDuplicates(1,2,2));//true
