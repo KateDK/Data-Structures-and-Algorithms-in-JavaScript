@@ -67,3 +67,15 @@ console.log(isAnagram('','')); //true
 console.log(isAnagram('anagram','nagaram')); //true
 console.log(isAnagram('qwerty','qeywrt')); //true
 console.log(isAnagram('texttwisttime','timetwisttext')); //true
+
+/**
+ Write a function called sameFrequency that takes two positive integers. find if the two numbers have the same frequency of digits.
+ */
+const sameFrequency = ()=>{
+
+};
+
+console.log(sameFrequency(182,281));//true
+console.log(sameFrequency(34,14));//false
+console.log(sameFrequency(3589578,5879385));//true
+console.log(sameFrequency(22,222));//true
