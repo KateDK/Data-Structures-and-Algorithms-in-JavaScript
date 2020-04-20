@@ -73,39 +73,32 @@ console.log(isAnagram('texttwisttime','timetwisttext')); //true
  Time complexity should be O(n);
  */
 
-const sameFrequency = (n1,n2)=>{
-n1=n1.toString();
-n2=n2.toString();
-const map = {};
-  if(n1.length === n2.length){
 
-    for(let i = 0; i < n1.length; i++){
-      let current = n1[i];
+function sameFrequency(num1,num2){
+  let arr1 = num1.toString().split("");
+  let arr2 = num2.toString().split("");
+  const map = {};
+  if(arr1.length !== arr2.length) return false;
+  for(let i = 0; i < arr1.length; i++){
+      let current = arr1[i];
       if(map[current]){
-        map[current]++;
+          map[current]++;
       }else{
-        map[current]= 1;
+          map[current]=1;
       }
-    }
-    for(let i = 0; i < n2.length; i++){
-      let current = n2[i];
-      if(!map[current]|| map[current < 0]){
-        return false;
-      }else{
-        map[current]--;
-      }
-    }
-
-    let mapVals = Object.values(map);
-    for(let i = mapVals.length-1; i >= 0; i--){
-      if(mapVals[i] === 0){
-        mapVals.pop();
-      }
-    }
-    return !(mapVals.length > 0);
   }
-  return false;
-};
+  while(arr2.length){
+      let current = arr2[arr2.length-1];
+      if(map[current] > 0){
+          map[current]--;
+      }else{
+          return false;
+      }
+      arr2.pop();
+  }
+  return !(arr2.length > 0);
+
+}
 
 console.log(sameFrequency(182,281));//true
 console.log(sameFrequency(34,14));//false
