@@ -61,3 +61,8 @@ console.log(minSubArray([1,4,16,22,5,7,8,9,10],39));//3
 console.log(minSubArray([1,4,16,22,5,7,8,9,10],55));//5
 console.log(minSubArray([4,3,3,8,1,2,3],11));//0
 console.log(minSubArray([1,4,16,22,5,7,8,9,10],95));//0
+
+
+/*
+Write a function called findLongestSubstring that takes a string and returns the length of the longest substring with all distinct characters
+*/
