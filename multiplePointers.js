@@ -126,3 +126,4 @@ return false;
   console.log(isSubsequence('abc','acb'));//false
   console.log(isSubsequence('abc',''));//false
   console.log(isSubsequence('','abc'));//false
+  console.log(isSubsequence('','abc'));//true;
