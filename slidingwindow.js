@@ -45,3 +45,9 @@ console.log(maxSubarraySum([2,2,2,2],3));//6
 console.log(maxSubarraySum([],5));//null
 console.log(maxSubarraySum([1,1,1,1],6));//null
 console.log(maxSubarraySum([1,2,5,2,8,1,5],4));//17
+
+
+/*
+Write a function called minSubArray that takes an array of positive integers and a positive integer
+The function should return the minimal length of contiguous subarray of which the sum is greater or equal to the integer passed to the function. The function should return 0 if none exsist.
+*/
