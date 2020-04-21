@@ -111,7 +111,18 @@ return false;
  console.log(avaregePair([1,3,3,5,6,7,10,12,19],8));//true
  console.log(avaregePair([-1,0,3,4,5,6],4.1));//false
  console.log(avaregePair([],4));//false
+
+
  /**
   Write a function called isSubsequence which takes two strings and checks if characters in the first string appear somewhere in the second string without their order changing.
   Time complexity should be at least O(n+m), space complexity should be O(1)
   */
+
+  const isSubsequence = (str1,str2)=>{};
+
+  console.log(isSubsequence('hello','hello world'));//true
+  console.log(isSubsequence('sing','sting'));//true
+  console.log(isSubsequence('abc','abracadabra'));//true
+  console.log(isSubsequence('abc','acb'));//false
+  console.log(isSubsequence('abc',''));//false
+  console.log(isSubsequence('','abc'));//false
