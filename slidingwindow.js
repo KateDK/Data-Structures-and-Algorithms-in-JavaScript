@@ -66,3 +66,13 @@ console.log(minSubArray([1,4,16,22,5,7,8,9,10],95));//0
 /*
 Write a function called findLongestSubstring that takes a string and returns the length of the longest substring with all distinct characters
 */
+
+const findLongestSubstring = (str) => {};
+
+console.log(findLongestSubstring(""));//0
+console.log(findLongestSubstring("rithmschool"));//7
+console.log(findLongestSubstring("thisisawesome"));//6
+console.log(findLongestSubstring("thecatinthehat"));//7
+console.log(findLongestSubstring("bbbbbbb"));//1
+console.log(findLongestSubstring("longestsubstring"));//8
+console.log(findLongestSubstring("thisishowwedoit"));//6
