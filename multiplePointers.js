@@ -118,12 +118,25 @@ return false;
   Time complexity should be at least O(n+m), space complexity should be O(1)
   */
 
-  const isSubsequence = (str1,str2)=>{};
+  const isSubsequence = (str1,str2)=>{
+    let pointer1 = 0;
+    let pointert = 0;
+
+    let checker = "";
+    while(pointer1 < str1.length && pointert < str2.length){
+      if(str1[pointer1] === str2[pointert]){
+        checker+= str1[pointer1];
+        pointer1++;
+      }else{
+        pointert++;
+      }
+    }
+    return checker === str1;
+  };
 
   console.log(isSubsequence('hello','hello world'));//true
   console.log(isSubsequence('sing','sting'));//true
   console.log(isSubsequence('abc','abracadabra'));//true
   console.log(isSubsequence('abc','acb'));//false
   console.log(isSubsequence('abc',''));//false
-  console.log(isSubsequence('','abc'));//false
   console.log(isSubsequence('','abc'));//true;
