@@ -28,8 +28,7 @@ const maxSubarraySum = (arr, n)=>{
   for(let i = 0; i < n; i++){
     tempMax+=arr[i];
   }
-  let start = 1;
-  let end = n;
+
   let max = tempMax;
 
   for(let i = n; i < arr.length; i++){
