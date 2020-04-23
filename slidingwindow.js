@@ -67,7 +67,29 @@ console.log(minSubArray([1,4,16,22,5,7,8,9,10],95));//0
 Write a function called findLongestSubstring that takes a string and returns the length of the longest substring with all distinct characters
 */
 
-const findLongestSubstring = (str) => {};
+const findLongestSubstring = (str) => {
+  let map = {};
+  let length = 0;
+  let start = 0;
+  let end = 0;
+  let tempLength = length;
+
+  while(end < str.length){
+    let current = str[end];
+    if(map[current]){
+      map[str[start]] = false;
+      start++;
+      length = Math.max(length, tempLength);
+      tempLength = end - start;
+    }else{
+      end++;
+      tempLength++;
+      map[current] = current;
+    }
+  }
+
+  return length;
+};
 
 console.log(findLongestSubstring(""));//0
 console.log(findLongestSubstring("rithmschool"));//7
