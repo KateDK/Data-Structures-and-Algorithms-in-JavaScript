@@ -85,6 +85,7 @@ const findLongestSubstring = (str) => {
       end++;
       tempLength++;
       map[current] = current;
+      length = Math.max(length, tempLength);
     }
   }
 
