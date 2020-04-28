@@ -52,7 +52,6 @@ Write a function called minSubArray that takes an array of positive integers and
 The function should return the minimal length of a contiguous subarray of which the sum is greater or equal to the integer passed to the function. The function should return 0 if none exsist.
 */
 
-const minSubArray = (arr, num) => {};
 
 console.log(minSubArray([2,3,1,2,4,3],7));//2
 console.log(minSubArray([2,1,6,5,4],9));//2
