@@ -52,6 +52,28 @@ Write a function called minSubArray that takes an array of positive integers and
 The function should return the minimal length of a contiguous subarray of which the sum is greater or equal to the integer passed to the function. The function should return 0 if none exsist.
 */
 
+let minSubArray = (arr,num)=>{
+  let total = 0;
+  let start = 0;
+  let end = 0;
+  let minLen = arr.length;
+
+  while(start < arr.length){
+    if(total < num && end < arr.length){
+      total += arr[end];
+      end++;
+      //console.log("adding to total: ",total);
+    }else if(total >= num){
+      minLen = Math.min(minLen, end-start);
+      total -= arr[start];
+      start++;
+      //console.log("substracting from total: ", total);
+    }else{
+      break;
+    }
+  }
+  return minLen === arr.length ? 0 : minLen;
+};
 
 console.log(minSubArray([2,3,1,2,4,3],7));//2
 console.log(minSubArray([2,1,6,5,4],9));//2
