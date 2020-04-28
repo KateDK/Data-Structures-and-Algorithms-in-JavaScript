@@ -62,12 +62,10 @@ let minSubArray = (arr,num)=>{
     if(total < num && end < arr.length){
       total += arr[end];
       end++;
-      //console.log("adding to total: ",total);
     }else if(total >= num){
       minLen = Math.min(minLen, end-start);
       total -= arr[start];
       start++;
-      //console.log("substracting from total: ", total);
     }else{
       break;
     }
