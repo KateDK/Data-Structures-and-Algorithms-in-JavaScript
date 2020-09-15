@@ -7,4 +7,6 @@
 
  }
 
- console.log(same([],[]));//
+ console.log(same([1],[1]));//true
+ console.log(same([2],[4,4]));//false
+ console.log(same([2,2],[4,4]));//true
