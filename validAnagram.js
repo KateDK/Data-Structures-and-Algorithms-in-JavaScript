@@ -13,7 +13,6 @@ const validAnagram = (str1,str2)=>{
     map[current] ? map[current]++ : map[current]=1;
   }
 
-
   for(let i = 0; i < str2.length; i++){
     const current = str2[i];
     if(!map[current]){
