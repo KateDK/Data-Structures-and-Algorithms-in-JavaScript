@@ -4,8 +4,22 @@
  * Return an array that includes both values that sum to zero or undefined if pair does not exist.
  */
 
- const sumZero = ()=>{
-
+ const sumZero = (arr)=>{
+   if(arr.length <= 1) return undefined;
+  let start = 0;
+  let end = arr.length-1;
+  while(end > start){
+    const first = arr[start];
+    const second = arr[end];
+    if(first+second === 0){
+      return([first,second]);
+    }else if(first+second > 0){
+      end--;
+    }else{
+      start++;
+    }
+  }
+  return undefined;
  };
 
  console.log(sumZero([-3,-2,-1,0,1,2,3]));//[-3,3]
