@@ -9,11 +9,10 @@
   let start = 0;
   let end = arr.length-1;
   while(end > start){
-    const first = arr[start];
-    const second = arr[end];
-    if(first+second === 0){
-      return([first,second]);
-    }else if(first+second > 0){
+    let sum = arr[start] + arr[end];
+    if(sum === 0){
+      return([arr[start],arr[end]]);
+    }else if(sum > 0){
       end--;
     }else{
       start++;
