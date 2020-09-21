@@ -3,6 +3,26 @@
  * The function should calculate the maximum sum of n consecutive elements in the array.
  */
 
+const maxSubArraySum = (arr,n) => {
+  if(arr.length === 0) return null;
+ let maxSum = 0;
+ for(let i = 0; i < arr.length; i++){
+   let tempMax = 0;
+   let counter = 0;
+   while(counter < n){
+     if(i <= arr.length-n){
+     tempMax+=arr[i+counter];
+     counter++;
+     }else{
+       break;
+     }
+   }
+   maxSum = Math.max(maxSum,tempMax);
+   tempMax=0;
+ }
+ return maxSum;
+};
+
  console.log(maxSubArraySum([1,2,5,2,8,1,5],2));//10
  console.log(maxSubArraySum([1,2,5,2,8,1,5],4));//17
  console.log(maxSubArraySum([4,2,1,6],1));//6
