@@ -5,7 +5,7 @@
 
 const maxSubArraySum = (arr,n) => {
   if(arr.length === 0) return null;
- let maxSum = 0;
+ let maxSum = -Infinity;
  for(let i = 0; i < arr.length; i++){
    let tempMax = 0;
    let counter = 0;
