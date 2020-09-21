@@ -5,18 +5,16 @@
 
 const maxSubArraySum = (arr,n) => {
   if(arr.length === 0) return null;
- let maxSum = -Infinity;
- for(let i = 0; i <= arr.length-n; i++){
-   let tempMax = 0;
-   let counter = 0;
-   while(counter < n){
-     tempMax+=arr[i+counter];
-     counter++;
-   }
-   maxSum = Math.max(maxSum,tempMax);
-   tempMax=0;
- }
- return maxSum;
+  let maxSum = 0;
+  for(let i = 0; i < n; i++){
+    maxSum+=arr[i];
+  }
+  let tempSum = maxSum;
+  for(let i = n; i < arr.length; i++){
+    tempSum = tempSum-arr[i-n]+arr[i];
+    maxSum = Math.max(maxSum,tempSum);
+  }
+  return maxSum;
 };
 
  console.log(maxSubArraySum([1,2,5,2,8,1,5],2));//10
