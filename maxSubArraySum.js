@@ -6,16 +6,12 @@
 const maxSubArraySum = (arr,n) => {
   if(arr.length === 0) return null;
  let maxSum = -Infinity;
- for(let i = 0; i < arr.length; i++){
+ for(let i = 0; i <= arr.length-n; i++){
    let tempMax = 0;
    let counter = 0;
    while(counter < n){
-     if(i <= arr.length-n){
      tempMax+=arr[i+counter];
      counter++;
-     }else{
-       break;
-     }
    }
    maxSum = Math.max(maxSum,tempMax);
    tempMax=0;
