@@ -4,13 +4,18 @@
  */
 const search = (arr,val) =>{
   let mid = Math.floor(arr.length/2);
+  const visited = {};
   while(mid > 0 && mid < arr.length){
     const current = arr[mid];
     if(current === val){
       return mid;
     }else if(current > val){
+      if(visited[mid])return -1;
+      visited[mid] = true;
       mid--;
     }else{
+      if(visited[mid])return -1;
+      visited[mid] = true;
       mid++;
     }
   }
