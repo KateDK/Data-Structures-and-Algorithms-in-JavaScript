@@ -2,18 +2,16 @@
  * Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in. You can solve this using the frequency counter pattern OR the multiple pointers pattern.
  */
 
-const areThereDuplicates = (...arguments) =>{
-  const map = {};
-  for(let i = 0; i < arguments.length; i++){
-    const current = arguments[i];
-    if(map[current]){
-      return true;
-    }else{
-      map[current]=1;
-    }
-  }
-  return false;
-};
+ function areThereDuplicates(){
+   const args = [...arguments];
+   const map = {};
+   for(let i = 0; i < args.length; i++){
+     const current = args[i];
+     if(map[current]) return true;
+     map[current]=1;
+   }
+   return false;
+ };
 
  console.log(areThereDuplicates(1,2,3));//false
  console.log(areThereDuplicates(1,2,2));//true
