@@ -5,7 +5,7 @@
  */
 
  const averagePair = (arr,avg)=>{
-   if(arr.length === 0)return false;
+   if(arr.length <= 1)return false;
    let first = 0;
    let second = arr.length-1;
    while(first < second){
@@ -25,4 +25,4 @@
  console.log(averagePair([-1,0,3,4,5,6],4.1));//false
  console.log(averagePair([],4));//false;
  console.log(averagePair([3],4));//false;
- console.log(averagePair([4],4));//true;
+ console.log(averagePair([4],4));//false;
