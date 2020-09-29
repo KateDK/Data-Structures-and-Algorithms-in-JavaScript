@@ -4,7 +4,21 @@
  * There may be more than one pair.
  */
 
- const averagePair = (arr,avg)=>{};
+ const averagePair = (arr,avg)=>{
+   if(arr.length === 0)return false;
+   let first = 0;
+   let second = arr.length-1;
+   while(first < second){
+     const currentAvg =  (arr[first] + arr[second])/2;
+     if(currentAvg === avg)return true;
+     if(currentAvg > avg){
+       second--;
+     }else{
+       first++;
+     }
+   }
+   return false;
+ };
 
  console.log(averagePair([1,2,3],2.5));//true
  console.log(averagePair([1,3,3,5,6,7,10,12,19],8));//true
