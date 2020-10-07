@@ -13,8 +13,8 @@ const maxSubarraySum = (arr,n)=>{
   }
   max = sum;
   for(let i = n; i < arr.length; i++){
-    let newSum = sum+arr[i]-arr[i-n];
-    max = Math.max(sum,newSum);
+    sum+=arr[i]-arr[i-n];
+    max = Math.max(max,sum);
   }
 return max;
 };
