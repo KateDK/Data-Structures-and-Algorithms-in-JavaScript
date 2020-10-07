@@ -4,8 +4,19 @@
 
  */
 
-const maxSubarraySum = ()=>{
-
+const maxSubarraySum = (arr,n)=>{
+  if (arr.length < n)  return null;
+  let sum = arr[0];
+  let max;
+  for(let i = 1; i < n; i++){
+    sum += arr[i];
+  }
+  max = sum;
+  for(let i = n; i < arr.length; i++){
+    let newSum = sum+arr[i]-arr[i-n];
+    max = Math.max(sum,newSum);
+  }
+return max;
 };
 
 
