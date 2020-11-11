@@ -66,5 +66,6 @@
  * }
  *
  * funcC is using a nested loop. Which means we have O(n*n), and simplified to O(n^2) - (O of n squared).
+ * The O(N^2) is significantly worse than O(n) because the growth of n^2 operations grows substantially quicker with larger values on n.
  *
  */
