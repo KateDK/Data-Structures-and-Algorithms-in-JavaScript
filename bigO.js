@@ -65,4 +65,6 @@
  *  }
  * }
  *
+ * funcC is using a nested loop. Which means we have O(n*n), and simplified to O(n^2) - (O of n squared).
+ *
  */
