@@ -52,4 +52,6 @@
  *
  * Our best case scenario is constant time - O(1). We know exactly how many operations it will take to execute. It will always remain the same.
  *
+ * When the number of operations is determined by the input we call it O(n), even if we have several operations that will repeat n times, we will not specify O(2n) but simplify to just O(n).
+ *
  */
