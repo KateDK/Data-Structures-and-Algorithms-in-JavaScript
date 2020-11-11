@@ -54,4 +54,15 @@
  *
  * When the number of operations is determined by the input we call it O(n), even if we have several operations that will repeat n times, we will not specify O(2n) but simplify to just O(n).
  *
+ *
+ * Things can get even worse:
+ *
+ * function funcC(n){
+ *  for(let i = 0; i < n; i++){
+ *    for(let j = 0; j > n; j++){
+ *      console.log(i,j);
+ *    }
+ *  }
+ * }
+ *
  */
