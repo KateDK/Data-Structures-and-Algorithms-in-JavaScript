@@ -50,6 +50,6 @@
  *
  * Basically, Big O allows us to formally talk about how the runtime of an algorithm grows as the input grows.
  *
- * Our best case scenario is constant time. We know exactly how many operations it will take to execute. It will always remain the same.
+ * Our best case scenario is constant time - O(1). We know exactly how many operations it will take to execute. It will always remain the same.
  *
  */
