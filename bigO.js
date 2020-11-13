@@ -119,4 +119,18 @@ logarithmic time complexity means that you decrease the amount of work
 you have to do (roughly by half) with each step.
  * If our algorithm "cuts" or divides our number (like in a binary search tree) it will be Olog(n)
  * Recursive solutions are often logarithmic
+ *
+ * Big O and objects:
+ * ------------------
+ * Objects are an excellent choice when the order does not matter.
+ * insertion - O(1)
+ * removal - O(1)
+ * searching - O(n)
+ * access - O(1)
+ *
+ * big O of object methods:
+ * Object.keys - O(n)
+ * Object.values - O(n)
+ * Object.entries - O(n)
+ * hasOwnProperty - O(1)
  */
