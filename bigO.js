@@ -76,4 +76,16 @@
  * -In a loop, the complexity is the length of the loop times the complexity of what happens inside of the loop (sometimes it can be nested loops).
  * -We usually care about the worst possible case.
  *
+ *
+ * Space complexity:
+ * ----------------
+ *
+ * Determine how much memory is taken as the size of the input grows.
+ * We only care about the additional space our algorithm will require and not the space required for the inputs.
+ *
+ * Some general rules:
+ * - Most primitives (booleans, numbers, undefined, null) are **constant time**.
+ * - Strings are **O(n)** space - n represents the length of the string.
+ * - Reference types (objects and arrays) are generally O(n) - n represents the number of keys or length of array.
+ *
  */
