@@ -74,5 +74,6 @@
  * -Variable assignment is also constant
  * -Accessing elements in an array or object is constant
  * -In a loop, the complexity is the length of the loop times the complexity of what happens inside of the loop (sometimes it can be nested loops).
+ * -We usually care about the worst possible case.
  *
  */
