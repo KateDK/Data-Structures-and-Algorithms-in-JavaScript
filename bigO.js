@@ -123,16 +123,18 @@ you have to do (roughly by half) with each step.
  * Big O and objects:
  * ------------------
  * Objects are an excellent choice when the order does not matter.
- * insertion - O(1)
- * removal - O(1)
- * searching - O(n)
- * access - O(1)
+ * -insertion - O(1)
+ * -removal - O(1)
+ * -searching - O(n)
+ * -access - O(1)
  *
  * big O of object methods:
- * Object.keys - O(n)
- * Object.values - O(n)
- * Object.entries - O(n)
- * hasOwnProperty - O(1)
+ * -Object.keys - O(n)
+ * -Object.values - O(n)
+ * -Object.entries - O(n)
+ * -hasOwnProperty - O(1)
+ *
+ *
  * Big O and arrays:
  * -----------------
  * Great when order is needed (although there may be times other solutions would be preferred)
