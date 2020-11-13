@@ -133,4 +133,22 @@ you have to do (roughly by half) with each step.
  * Object.values - O(n)
  * Object.entries - O(n)
  * hasOwnProperty - O(1)
+ * Big O and arrays:
+ * -----------------
+ * Great when order is needed (although there may be times other solutions would be preferred)
+ * -insertion - depends (always quicker to add to the end)
+ * -removal - depends (always quicker to remove from the en d)
+ * -searching - O(n)
+ * -access - O(1)
+ *
+ * big O of array methods:
+ * -push - O(1)
+ * -pop - O(1)
+ * -shift - O(n)
+ * -unshift - O(n)
+ * -concat - O(n)
+ * -slice - O(n)
+ * -splice - O(n)
+ * -sort - O(n log n)
+ * -forEach/map/filter/reduce/etc. - O(n)
  */
