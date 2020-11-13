@@ -98,4 +98,18 @@
  * }
  *
  * In the function above we use additional space for "total" and "i" - sins they only refer to primitive data types (both are numbers) the space complexity here is O(1).
+ *
+ * Example:
+ * function double(arr){
+ *  let resArr = [];
+ *  for(let i = 0; i < arr.length; i++){
+ *    resArr.push(arr[i] * 2);
+ *  }
+ *  return resArr;
+ * }
+ *
+ * In the function above we create a new array that will hold the same number of elements as the input array. Therefore our space will grow directly in proportion to the length of the input array. Therefore space complexity in this case is O(n).
+ *
+ *
+ *
  */
