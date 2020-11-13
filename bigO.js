@@ -111,5 +111,12 @@
  * In the function above we create a new array that will hold the same number of elements as the input array. Therefore our space will grow directly in proportion to the length of the input array. Therefore space complexity in this case is O(n).
  *
  *
- *
+ * Logarithms:
+ * -----------
+ * In mathematics, the logarithm is the inverse operation to exponentiation,
+just as division is the inverse of multiplication. Thus,
+logarithmic time complexity means that you decrease the amount of work
+you have to do (roughly by half) with each step.
+ * If our algorithm "cuts" or divides our number (like in a binary search tree) it will be Olog(n)
+ * Recursive solutions are often logarithmic
  */
