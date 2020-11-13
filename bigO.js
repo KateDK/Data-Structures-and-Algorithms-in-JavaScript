@@ -88,4 +88,14 @@
  * - Strings are **O(n)** space - n represents the length of the string.
  * - Reference types (objects and arrays) are generally O(n) - n represents the number of keys or length of array.
  *
+ * Example:
+ * function sum(arr){
+ *  let total = 0;
+ *  for(let i = 0; i < arr.length; i++){
+ *    total+=arr[i];
+ *  }
+ *  return total;
+ * }
+ *
+ * In the function above we use additional space for "total" and "i" - sins they only refer to primitive data types (both are numbers) the space complexity here is O(1).
  */
