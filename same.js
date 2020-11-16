@@ -12,31 +12,33 @@
 //   return true;
 //  }
 
-function same(arr1,arr2){
-  if(arr1.length !== arr2.length) return false;
-  const map1 = {};
-  const map2 = {};
 
-  arr1.map(elm=>{
-    map1[elm] ? map1[elm]++ : map1[elm]=1;
-  });
 
-  arr2.map(elm=>{
-    map2[elm] ? map2[elm]++ : map2[elm]=1;
-  });
+// function same(arr1,arr2){
+//   if(arr1.length !== arr2.length) return false;
+//   const map1 = {};
+//   const map2 = {};
 
-  for(let key in map1){
-    const sqr = key**2;
-    if(!map2[sqr]){
-      return false;
-    };
-    if(map2[sqr] !== map1[key]){
-      return false;
-    };
-  };
-  return true;
- }
+//   arr1.map(elm=>{
+//     map1[elm] ? map1[elm]++ : map1[elm]=1;
+//   });
 
- console.log(same([1],[1]));//true
- console.log(same([2],[4,4]));//false
- console.log(same([2,2],[4,4]));//true
+//   arr2.map(elm=>{
+//     map2[elm] ? map2[elm]++ : map2[elm]=1;
+//   });
+
+//   for(let key in map1){
+//     const sqr = key**2;
+//     if(!map2[sqr]){
+//       return false;
+//     };
+//     if(map2[sqr] !== map1[key]){
+//       return false;
+//     };
+//   };
+//   return true;
+//  }
+
+//  console.log(same([1],[1]));//true
+//  console.log(same([2],[4,4]));//false
+//  console.log(same([2,2],[4,4]));//true
