@@ -4,25 +4,29 @@
  * example: "cinema" is an anagram of "iceman"
  */
 
-const validAnagram = (str1,str2)=>{
-  if(str1.length !== str2.length) return false;
+// const validAnagram = (str1,str2)=>{
+//   if(str1.length !== str2.length) return false;
 
-  const map = {};
-  for(let i = 0; i < str1.length; i++){
-    const current = str1[i];
-    map[current] ? map[current]++ : map[current]=1;
-  }
+//   const map = {};
+//   for(let i = 0; i < str1.length; i++){
+//     const current = str1[i];
+//     map[current] ? map[current]++ : map[current]=1;
+//   }
 
-  for(let i = 0; i < str2.length; i++){
-    const current = str2[i];
-    if(!map[current]){
-      return false;
-    }else{
-      map[current]--;
+//   for(let i = 0; i < str2.length; i++){
+//     const current = str2[i];
+//     if(!map[current]){
+//       return false;
+//     }else{
+//       map[current]--;
+//     }
+//   }
+
+//   return true;
+// };
     }
   }
 
-  return true;
 };
 
 console.log(validAnagram("",""));//true
