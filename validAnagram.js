@@ -50,9 +50,12 @@ const validAnagram = (str1,str2)=>{
   return false;
 };
 
+
+
 console.log(validAnagram("",""));//true
 console.log(validAnagram("cat","mat"));//false
 console.log(validAnagram("add","dad"));//true
+console.log(validAnagram("add","dada"));//false
 console.log(validAnagram("abcdefg","gfedcb"));//false
 console.log(validAnagram("abcdefg","gfedcba"));//true
 
